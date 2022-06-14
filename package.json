@@ -1,0 +1,38 @@
+{
+  "name": "neon",
+  "description": "Project index",
+  "version": "0.1.0",
+  "homepage": "https://github.com/grahhnt/neon",
+  "license": "MIT",
+  "author": {
+    "name": "Grant Sommer",
+    "email": "contact@grantsommer.com",
+    "url": "https://grantsommer.com"
+  },
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "docker-build": "eval \"docker build -t neon:latest --build-arg NEXT_PUBLIC_APP_NAME=$(sed -n -e '/^NEXT_PUBLIC_APP_NAME=/p' .env.local | rev | cut -d= -f1 | rev) .\""
+  },
+  "dependencies": {
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/icons-material": "^5.8.3",
+    "@mui/material": "^5.8.3",
+    "mongodb": "^4.7.0",
+    "mongoose": "^6.3.6",
+    "next": "12.1.6",
+    "next-auth": "^4.4.0",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "react-markdown": "^8.0.3",
+    "sass": "^1.52.3"
+  },
+  "devDependencies": {
+    "eslint": "8.17.0",
+    "eslint-config-next": "12.1.6"
+  }
+}
